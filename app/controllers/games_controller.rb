@@ -17,6 +17,9 @@ class GamesController < ApplicationController
 
 private
 
+  def validation
+  end
+
   def included?(letters, word)
     @word.chars.all?  { |letter| @word.count(letter) <= @letters.count(letter) }
   end
