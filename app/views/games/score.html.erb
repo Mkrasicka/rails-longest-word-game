@@ -1,9 +1,10 @@
 <%= @letters %>
  <% if @included == true && @english_word == false %>
-  <p> <%= "Sorry but #{@word.to_a} does not seem to be a valid english word" %></p>
+  <p> <%= "Sorry but #{@word} does not seem to be a valid english word" %></p>
   <p> <%= link_to("Play again", new_path) %></p>
   <% elsif @english_word == false %>
  <p> <%= "Sorry but test can't be build of #{@word.split()}" %> </p>
   <p> <%= link_to("Play again", new_path) %> </p>
  <% elsif @included == true && @english_word == true %>
+ <p> "<strong>Congratulations!</strong> Dune is a valid English word!" </p>
  <% end %>
